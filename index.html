@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Notícias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+    <header class="header">
+        <h1>Jornalismo na certa</h1>
+        <div class="barra-de-busca">
+            <input type="text" placeholder="Pesquise aqui">
+            <span class="icone-de-busca">🔍</span>
+        </div>
+        <div class="icone-menu" onclick="toggleMenu()">
+            ☰
+        </div>
+    </header>
+    <aside id="sidebar" class="sidebar">
+        <nav class="nav-bar">
+            <ul class="nav-list">
+                <li class="nav-link">
+                    <a class="nav-item" href="#">Home</a>
+                </li>
+                <li class="nav-link">
+                    <a class="nav-item" href="#">Em Alta</a>
+                </li>
+                <li class="nav-link">
+                    <a class="nav-item" href="#">Política</a>
+                </li>
+                <li class="nav-link">
+                    <a  class="nav-item"href="#">Entretenimento</a>
+                </li>
+                <li class="nav-link">
+                    <a class="nav-item" href="#">Segurança</a>
+                </li>
+                <li class="nav-link">
+                    <a class="nav-item" href="#">Nacional</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <h1>Conteúdo Principal</h1>
+            <div class="news-section">
+                <div class="breaking">
+                    <ul class="news-letter">
+                        <li>
+                            <!-- Notícia Principal -->
+                            <a class="news-link" href="news-folder/sid.html">
+                                <div class="news1"><img class="big-heading" src="assets/a-era-do-gelo.png" alt="FakeNewsImg1"></div>
+                                <div class="bar1"><img class="big-french" src="assets/frenchBarLol.png" alt="TotallyNotTheFrenchFlagLOL"></div>
+                                <h1 class="news-body">Sid domina o curso de ciência da computação!</h1>
+                                <p display=block class="news-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis quidem aliquam quos a, cum quibusdam ratione incidunt voluptate illo natus facilis modi vitae sed mollitia itaque id ea voluptatibus velit temporibus accusamus delectus, eveniet dolores neque. Amet ex consequuntur magni quibusdam voluptatum expedita ad obcaecati quae fugiat vel repellendus, tempore perspiciatis, culpa ut quaerat pariatur voluptatibus dicta, aliquid recusandae. Perspiciatis quis eligendi, commodi voluptatem tempore excepturi, illum sequi unde id cum, corrupti nostrum illo dolore debitis laboriosam. Eligendi error placeat nobis dignissimos dolore? Sint libero nobis esse. Fugit pariatur aut voluptate, cupiditate doloribus nostrum ab, iusto numquam reprehenderit consequuntur quibusdam a amet debitis blanditiis illo ipsam rerum ipsa accusamus voluptates dolorum doloremque consequatur deserunt impedit? Blanditiis, commodi animi cupiditate voluptas deserunt placeat aut quidem repellat iure nam natus voluptate magni nihil iste quibusdam mollitia quis sapiente iusto impedit? Perspiciatis amet hic quos, cumque ex quod saepe eos praesentium soluta asperiores neque nulla quia, consequatur dolore magni odit ullam ut exercitationem facilis? A nam non tempore neque atque. Provident blanditiis voluptatibus incidunt deleniti est reiciendis earum aliquam similique cum qui, explicabo mollitia quas, amet architecto distinctio facere doloremque totam fugiat nulla, aperiam tempore id quo. Eos velit dolores neque beatae totam?</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        
+                <div class="small-news-container">
+                    <ul class="news-letter">
+                        <li class="news-cell">
+                            <!-- Notícia 1 -->
+                            <a class="news-link" href="news-folder/fakeNews.html">
+                                <div class="news1"><img class="small-heading" src="assets/News1.jpg" alt="FakeNewsImg1"></div>
+                                <div class="bar1"><img class="small-french" src="assets/frenchBarLol.png" alt="TotallyNotTheFrenchFlagLOL"></div>
+                                <h1 class="news-body">Fake news quebra jornal!</h1>
+                            </a>
+                        </li>
+                        <li class="news-cell">
+                            <!-- Notícia 2 -->
+                            <a class="news-link" href="news-folder/penguins.html">
+                                <div class="news1"><img class="small-heading" src="assets/penguin.png" alt="FakeNewsImg1"></div>
+                                <div class="bar1"><img class="small-french" src="assets/frenchBarLol.png" alt="TotallyNotTheFrenchFlagLOL"></div>
+                                <h1 class="news-body">Penguins são aves?!</h1>
+                            </a>
+                        </li>
+                        <li class="news-cell">
+                            <!-- Notícia 3 -->
+                            <a class="news-link" href="news-folder/netflix.html">
+                                <div class="news1"><img class="small-heading" src="assets/images.png" alt="FakeNewsImg1"></div>
+                                <div class="bar1"><img  class="small-french" src="assets/frenchBarLol.png" alt="TotallyNotTheFrenchFlagLOL"></div>
+                                <h1 class="news-body">Netflix segue a tentar extrair mais dinheiro dos consumidores!</h1>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </main>
+    <footer class="footer">
+        <p>© 2025 Jornalismo na Certa. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+        document.addEventListener('click', function(event) {
+            const sidebar = document.getElementById('sidebar');
+            const menuIcon = document.querySelector('.icone-menu');
+
+            if (!sidebar.contains(event.target) && !menuIcon.contains(event.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
